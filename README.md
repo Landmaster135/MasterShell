@@ -1,4 +1,4 @@
 # MasterShell
 
-##### -  '.bat' &nbsp;&nbsp;&emsp;: for Windows
-##### -  '.command' : for Mac
+##### - &nbsp; '.bat' &nbsp;&nbsp;&emsp;&emsp;: for Windows
+##### - &nbsp; '.command' : for Mac
