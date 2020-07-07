@@ -1,4 +1,4 @@
-# --- code by utf-8 ---
+# --- code in utf-8 ---
 # NewTextFileGenerator
 
 cd /Users/$USER/Downloads
