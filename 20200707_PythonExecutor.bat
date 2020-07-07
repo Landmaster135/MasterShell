@@ -1,6 +1,6 @@
 @echo off
 
-REM --- code by utf-8 ---
+REM --- code in utf-8 ---
 REM Drag .py file to me.
 
 for %%i in (%*) do (
