@@ -1,3 +1,6 @@
+# --- code by utf-8 ---
+# NewTextFileGenerator
+
 cd /Users/$USER/Downloads
 VAR1=`date +%Y%m%d`
 VAR2=`_`
