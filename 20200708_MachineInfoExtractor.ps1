@@ -1,6 +1,8 @@
 # --- code by utf-8 ---
 # MachineInfoExtractor.bat
 
+# this script works only in the local.
+
 wmic csproduct get Vendor
 wmic csproduct get Name
 wmic csproduct get IdentifyingNumber
