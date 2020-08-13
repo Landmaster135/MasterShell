@@ -9,3 +9,4 @@ date >> /backup_nfs/work/$TARGETDIR/timestamp.txt
 
 echo 'end time' >> /backup_nfs/work/$TARGETDIR/timestamp.txt
 date >> /backup_nfs/work/$TARGETDIR/timestamp.txt
+
