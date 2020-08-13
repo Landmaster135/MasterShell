@@ -11,7 +11,7 @@
 ### Command List of Linux
 | Command | Content |
 |:--------------------:|:--------------------------------------------------------------------|
-| Command Mode |||
+| Command Mode                                                            |
 | x                    | delete a line                                                       |
 | dd                   | delete a character                                                  |
 | i                    | カーソル前に，Escが押されるまでに入力した文字列を挿入                   |
