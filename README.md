@@ -1,14 +1,14 @@
 # MasterShell
 
 - - -
-### Extension of each OS.
+### * Extension of each OS
 
 ##### - &nbsp; '.bat' &nbsp;&emsp;&emsp;&emsp;: for Windows
 ##### - &nbsp; '.command' : for Mac
 
 ***
 
-### Command List of Linux
+### * Command List of Linux
 | ***Command***        | ***Content***                                                       |
 |:--------------------:|:--------------------------------------------------------------------|
 | **Command Mode**     |-----------------------------------------------------------------------------------------|
