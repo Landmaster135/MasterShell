@@ -9,7 +9,7 @@
 ***
 
 ### Command List of Linux
-| Command | Content |
+| ***Command***        | ***Content***                                                       |
 |:--------------------:|:--------------------------------------------------------------------|
 | **Command Mode**     |                                                                     |
 | x                    | delete a line                                                       |
