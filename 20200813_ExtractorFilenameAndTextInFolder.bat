@@ -39,3 +39,4 @@ for %%A in (%target0%%target1%*) do (
   )
 )
 
+endlocal
