@@ -33,10 +33,11 @@ set /a startChr1=%len%+%startChr0%
 :: Write to target2
 for %%A in (%target0%%target1%*) do (
   set Str1=%%A
-  echo !Str1:~%startChr1%,%countChr%!>> %target3%
+  echo !Str1:~%startChr1%,%countChr%!%comma%%%~tA>> %target3%
   for /f %%i in (%%A) do (
     echo %%i>> %target3%
   )
 )
 
 endlocal
+
