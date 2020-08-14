@@ -36,7 +36,6 @@ set /a startChr1=%len%+%startChr0%
 
 :: NOT execute me if a file about same centerNumber is exist
 for %%A in (%target0%%target1%*) do (
-:: for /r %target0%%target1% %%A in (*) do (
   set Str1=%%A
   set Str2=!Str1:~%startChr1%,%countChr%!
   if !Str2!==%centerNumber% (
