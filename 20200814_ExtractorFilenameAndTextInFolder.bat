@@ -34,10 +34,7 @@ set /a startChr1=%len%+%startChr0%
 for %%A in (%target0%%target1%*) do (
   set Str1=%%A
   echo !Str1:~%startChr1%,%countChr%!%comma%%%~tA>> %target3%
-  for /f %%i in (%%A) do (
-    echo %%i>> %target3%
-  )
+  type !Str1!>> %target3%
 )
 
 endlocal
-
