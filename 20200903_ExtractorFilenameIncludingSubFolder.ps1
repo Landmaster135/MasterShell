@@ -1,5 +1,5 @@
 # --- code by utf-8 ---
-# .ps1
+# ExtractorFilenameIncludingSubFolder.ps1
 
 # date of execution
 $execDate     = Get-Date -Format "yyyyMMdd";
@@ -7,11 +7,11 @@ $execTime     = Get-Date -Format "hhmmss";
 $execDateTime = $execDate + $execTime;
 
 # absolutely path of target folder to write
-$target0 = '\\150.67.66.73\c$\Users\Public\Desktop\';
+$target0 = '\\XXX.XXX.XXX.XXX\c$\Users\Public\Desktop\';
 $target1 = 'wordmemotest\';
 
 # absolutely path of target file to read
-$target2 = 'C:\pionet\kyouyuu\word_memo\';
+$target2 = 'C:\xxxxxxxx\xxxxxxx\word_memo\';
 
 # absolutely path of target file to write
 $centerNumber = HOSTNAME.EXE;
