@@ -7,11 +7,15 @@ $execTime     = Get-Date -Format "hhmmss";
 $execDateTime = $execDate + $execTime;
 
 # absolutely path of target folder to write
+# ---------------------------- !! CHECK start !! ----------------------------
 $target0 = '\\XXX.XXX.XXX.XXX\c$\Users\Public\Desktop\';
 $target1 = 'wordmemotest\';
+# ---------------------------- !! CHECK end !! ----------------------------
 
 # absolutely path of target file to read
+# ---------------------------- !! CHECK start !! ----------------------------
 $target2 = 'C:\xxxxxxxx\xxxxxxx\word_memo\';
+# ---------------------------- !! CHECK end !! ----------------------------
 
 # absolutely path of target file to write
 $centerNumber = HOSTNAME.EXE;
