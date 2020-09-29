@@ -7,9 +7,11 @@ set execDate=%date:~0,4%%date:~5,2%%date:~8,2%
 set execDateTime=%execDate%%time:~0,2%%time:~3,2%%time:~6,2%
 
 :: absolutely path of target folder to write
+:: ---------------------------- !! CHECK start !! ----------------------------
 set env_address=XXX.XXX.XXX.XXX
 set target0=\\%env_address%\c$\Users\Public\Desktop\
 set target1=wordmemotest\
+:: ---------------------------- !! CHECK end !! ----------------------------
 
 :: absolutely path of target file to read
 set target2=C:\xxx\xxx\xxx\
