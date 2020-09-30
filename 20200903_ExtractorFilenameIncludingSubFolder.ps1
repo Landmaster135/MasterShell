@@ -44,7 +44,8 @@ $output = '';
 
 foreach($file in $fileList) {
   $file1 = $file.FullName;
-  $name = $(Get-ItemProperty $file1).BaseName + $targetExt;
+  # $name = $(Get-ItemProperty $file1).BaseName + $targetExt;
+  $name = $(Get-ItemProperty $file1).Name;
   $cTime = $(Get-ItemProperty $file1).CreationTime;
   $wTime = $(Get-ItemProperty $file1).LastWriteTime;
   $size  = $(Get-ItemProperty $file1).Length;
