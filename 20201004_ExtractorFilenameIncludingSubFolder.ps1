@@ -8,7 +8,7 @@ $execDateTime = $execDate + $execTime;
 
 # absolutely path of target folder to write
 # ---------------------------- !! CHECK start !! ----------------------------
-$target0 = 'C:\Users\OCT--\Downloads\';
+$target0 = 'C:\Users\%username%\Downloads\';
 $target1 = 'musicList\';
 # ---------------------------- !! CHECK end !! ----------------------------
 
