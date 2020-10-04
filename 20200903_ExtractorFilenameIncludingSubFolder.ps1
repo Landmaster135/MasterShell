@@ -37,7 +37,6 @@ foreach($file in $wmemoList) {
   }
 }
 
-# $target2 = 'C:\Users\95066\Downloads';
 $fileList = Get-ChildItem $target2 -Recurse -File -Filter *$targetExt;
 $comma = ",";
 $output = '';
