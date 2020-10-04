@@ -4,6 +4,7 @@
 ### Extension of each OS
 
 ##### - &nbsp; '.bat' &nbsp;&emsp;&emsp;&emsp;: for Windows
+##### - &nbsp; '.ps1' &nbsp;&emsp;&emsp;&emsp;: for Windows Powershell
 ##### - &nbsp; '.command' : for Mac
 
 ***
