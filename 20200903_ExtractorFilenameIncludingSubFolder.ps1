@@ -19,31 +19,57 @@ $target2 = 'C:\xxxxxxxx\xxxxxxx\word_memo\';
 
 # absolutely path of target file to write
 $centerNumber = HOSTNAME.EXE;
-$target3 = $target0 + $target1 + $execDateTime + $centerNumber + '_haifu_test.txt';
-$target4 = $target0 + $target1;
+$target_output = $target0 + $target1 + $execDateTime + $centerNumber + '.csv';
+$target_to_save = $target0 + $target1;
 $comma = ',';
 $startChr0 = $execDateTime.Length;
 $countChr  = $centerNumber.Length;
 $targetExt = '.doc';
 
-# NOT execute if a file about same centerNumber is exist
-$wmemoList = Get-ChildItem $target4 -File -Filter *.txt;
+# get file list about the folder to save wordmemo files.
+$wmemoList = Get-ChildItem $target_to_save -File -Filter *.csv;
 
+# prepare to exception handling.
+$ErrorActionPreference = "Stop"
+$target_error = $target0 + $target1 + 'error_exists__' + $centerNumber + '.csv';
+$error_message = '';
+
+# NOT execute if a file about same centerNumber is exist
 foreach($file in $wmemoList) {
   $file1 = $file.FullName;
   $name = $(Get-ItemProperty $file1).BaseName + $targetExt;
   if ($name.Substring($startChr0, $countChr) -eq $centerNumber) {
+    $error_message = $execDateTime + ': file already exists.';
+    Write-Output $error_message >> $target_error;
     exit;
   }
 }
 
-$fileList = Get-ChildItem $target2 -Recurse -File -Filter *$targetExt;
+# Error Handler (ItemNotFoundException)
+$target_error = $target0 + $target1 + 'error_no_path_' + $centerNumber + '.csv';
+try {
+  $fileList = Get-ChildItem $target2 -Recurse -File -Filter *$targetExt;
+}
+catch [Exception] {
+  $error_message = $execDateTime + ': ' + $_.Exception.Message;
+  Write-Output $error_message >> $target_error;
+  exit;
+}
+
+# Error Handler (no wordmemo files)
+$target_error = $target0 + $target1 + 'error_no_file_' + $centerNumber + '.csv';
+if ($fileList -eq $null) {
+  $error_message = $execDateTime + ': no files but a folder exists.';
+  Write-Output $error_message >> $target_error;
+  exit;
+}
+
+# prepare to output file which has survey results.
 $comma = ",";
 $output = '';
 
 foreach($file in $fileList) {
   $file1 = $file.FullName;
-  # $name = $(Get-ItemProperty $file1).BaseName + $targetExt;
   $name = $(Get-ItemProperty $file1).Name;
   $cTime = $(Get-ItemProperty $file1).CreationTime;
   $wTime = $(Get-ItemProperty $file1).LastWriteTime;
