@@ -25,9 +25,51 @@ function extractorFromFolder{
 extractorFromFolder $execDateTime $location $exportFile
 
 
-Desktop, Programs, MyDocuments, Personal, Favorites, Startup, Recent, SendTo, StartMenu, MyMusic, MyVideos, DesktopDire
-ctory, MyComputer, NetworkShortcuts, Fonts, Templates, CommonStartMenu, CommonPrograms, CommonStartup, CommonDesktopDir,,,
-ectory, ApplicationData, PrinterShortcuts, LocalApplicationData, InternetCache, Cookies, History, CommonApplicationData,,,,
-, Windows, System, ProgramFiles, MyPictures, UserProfile, SystemX86, ProgramFilesX86, CommonProgramFiles, CommonProgram,,
-FilesX86, CommonTemplates, CommonDocuments, CommonAdminTools, AdminTools, CommonMusic, CommonPictures, CommonVideos, Re,,,
-sources, LocalizedResources, CommonOemLinks, CDBurning,,,,,,,,
+
+Desktop
+Programs
+MyDocuments
+Personal
+Favorites
+Startup
+Recent
+SendTo
+StartMenu
+MyMusic
+MyVideos
+DesktopDirectory
+MyComputer
+NetworkShortcuts
+Fonts
+Templates
+CommonStartMenu
+CommonPrograms
+CommonStartup
+CommonDesktopDirectory
+ApplicationData
+PrinterShortcuts
+LocalApplicationData
+InternetCache
+Cookies
+History
+CommonApplicationData
+Windows
+System
+ProgramFiles
+MyPictures
+UserProfile
+SystemX86
+ProgramFilesX86
+CommonProgramFiles
+CommonProgramFilesX86
+CommonTemplates
+CommonDocuments
+CommonAdminTools
+AdminTools
+CommonMusic
+CommonPictures
+CommonVideos
+Resources
+LocalizedResources
+CommonOemLinks
+CDBurning
