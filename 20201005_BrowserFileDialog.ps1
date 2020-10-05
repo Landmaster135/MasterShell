@@ -1,14 +1,14 @@
 ﻿# --- code by utf-8 ---
 # BrowserFileDialog.ps1
 
-$abolutely_path = 'Desktop'
+$absolutely_path = 'Desktop';
 
 function browserFileDialog{
-  param($abolutely_path)
+  param($absolutely_path);
 
-  Add-Type -AssemblyName System.Windows.Forms
+  Add-Type -AssemblyName System.Windows.Forms;
   $FileBrowser = New-Object System.Windows.Forms.OpenFileDialog -Property @{ 
-    InitialDirectory = [Environment]::GetFolderPath($abolutely_path);
+    InitialDirectory = [Environment]::GetFolderPath($absolutely_path);
     Filter = 'text (*.txt,*.csv)|*.txt;*.csv';
     Title = 'Select File';
   }
@@ -23,4 +23,4 @@ function browserFileDialog{
 }
 
 # browse file dialog.
-browserFileDialog $abolutely_path;
+browserFileDialog $absolutely_path;
