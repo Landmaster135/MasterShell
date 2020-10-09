@@ -1,4 +1,7 @@
-﻿function Do_Process(){
+# --- code by utf-8 ---
+# ParallelExecutor.ps1
+
+function Do_Process(){
     param(
         [string] $text
     )
