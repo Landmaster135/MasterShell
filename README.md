@@ -1,5 +1,6 @@
 # MasterShell
 
+#### This repogitory has codes for powershell, MS-DOS, Bash and Javascript.
 - - -
 ### Extension of each OS
 
