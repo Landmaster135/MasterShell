@@ -39,6 +39,6 @@ array.forEach(function(value) {
     data.push([...document.querySelectorAll('td')][value].innerText);
 });
 var length_of_data = 0
-var sep = ",";
-console.log(`${data[0+length_of_data]}${sep}${data[1+length_of_data]}${sep}${data[2+length_of_data]}${sep}${data[3+length_of_data]}${sep}${data[4+length_of_data]}${sep}${data[5+length_of_data]}`);
+var sep = "\t";
+console.log(`${data[0+length_of_data]}${sep}${sep}${data[1+length_of_data]}${sep}${data[2+length_of_data]}${sep}${sep}${data[3+length_of_data]}${sep}${data[4+length_of_data]}${sep}${data[5+length_of_data]}`);
 
