@@ -23,9 +23,9 @@ var data = [];
 // This statement makes space.
 // var reader = new FileReader();
 // array.forEach(function(value) {
-//     console.log([...document.querySelectorAll('td')][value].innerText);
+//     data.push([...document.querySelectorAll('td')][value].innerText);
 // });
-// half_length_of_data = data.length/2
+// half_length_of_data = data.length/2 - 1
 // var sep = ",";
 // console.log(data[0+half_length_of_data], sep, data[1+half_length_of_data], sep, data[2+half_length_of_data], sep, data[3+half_length_of_data], sep, data[4+half_length_of_data], sep, data[5+half_length_of_data]);
 
@@ -33,9 +33,9 @@ var data = [];
 // this statement can realize.
 var reader = new FileReader();
 array.forEach(function(value) {
-    console.log([...document.querySelectorAll('td')][value].innerText);
+    data.push([...document.querySelectorAll('td')][value].innerText);
 });
-half_length_of_data = data.length/2
+half_length_of_data = data.length/2 - 1
 var sep = ",";
 console.log(`${data[0+half_length_of_data]}${sep}${data[1+half_length_of_data]}${sep}${data[2+half_length_of_data]}${sep}${data[3+half_length_of_data]}${sep}${data[4+half_length_of_data]}${sep}${data[5+half_length_of_data]}`);
 
