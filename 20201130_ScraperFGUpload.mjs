@@ -32,6 +32,9 @@ var data = [];
 
 // this statement can realize.
 var reader = new FileReader();
+var array = [324,326,328,330,334,338];
+var info;
+var data = [];
 array.forEach(function(value) {
     data.push([...document.querySelectorAll('td')][value].innerText);
 });
