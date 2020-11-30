@@ -13,8 +13,10 @@ var data = [];
 // });
 // console.log(data);
 
+
+var reader = new FileReader();
 array.forEach(function(value) {
-    console.log([...document.querySelectorAll('td')][value].value);
+    console.log([...document.querySelectorAll('td')][value].innerText);
 });
 console.log(data);
 
