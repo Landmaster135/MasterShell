@@ -36,3 +36,5 @@ array.forEach(function(value) {
 // This is it!
 console.log(data);
 
+// I don't know why this property is uncaughted.
+// navigator.clipboard.writeText(data);
