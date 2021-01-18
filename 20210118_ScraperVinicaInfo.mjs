@@ -20,11 +20,11 @@ var array = [`${[...document.querySelectorAll('span')][4].innerText}`, // ワイ
              ``,// 参考2
              ``,// Instagramに貼り付け
              ``,// vinicaフォルダに入れた
-             `${[...document.querySelectorAll('div')][27].className}`.substr(length_of_taste,4), // ボリューム（軽い＜重い）
-             `${[...document.querySelectorAll('div')][28].className}`.substr(length_of_taste,4), // タンニン（控えめ＜強い）
-             `${[...document.querySelectorAll('div')][29].className}`.substr(length_of_taste,4), // 甘み（ドライ＜甘い）
-             `${[...document.querySelectorAll('div')][30].className}`.substr(length_of_taste,4), // 酸味（まろやか＜シャープ）
-             `${[...document.querySelectorAll('div')][31].className}`.substr(length_of_taste,4) // 果実味（スパイシー＜フルーティ）
+             `${[...document.querySelectorAll('div')][27].className}`.substr(length_of_taste,1), // ボリューム（軽い＜重い）
+             `${[...document.querySelectorAll('div')][28].className}`.substr(length_of_taste,1), // タンニン（控えめ＜強い）
+             `${[...document.querySelectorAll('div')][29].className}`.substr(length_of_taste,1), // 甘み（ドライ＜甘い）
+             `${[...document.querySelectorAll('div')][30].className}`.substr(length_of_taste,1), // 酸味（まろやか＜シャープ）
+             `${[...document.querySelectorAll('div')][31].className}`.substr(length_of_taste,1) // 果実味（スパイシー＜フルーティ）
             ];
 var sep = "\t";
 var data = ``;
