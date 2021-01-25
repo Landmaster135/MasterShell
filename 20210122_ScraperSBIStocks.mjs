@@ -25,8 +25,7 @@ for (var i = 0; i < rowNum; i++) {
             str_after  = str_base.substr(str_base.indexOf("\n") + 1, str_base.length - str_base.indexOf("\n")); // 改行文字の後の数値
             str_before = str_before.replace(/,/g, '');
             str_after  = str_after.replace(/,/g, '');
-            array.push(str_before.replace(',', '') + "\t" + String(Number(str_before) - Number(str_after)));
-            console.log("3");
+            array.push(str_before.replace(',', '') + "\t" + String(Number(str_after) - Number(str_before)));
         }
     });
 }
