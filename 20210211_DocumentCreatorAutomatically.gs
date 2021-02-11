@@ -1,6 +1,6 @@
 function setTrigger(){
   const date = new Date();
-  // date.setDate(date.getDate() + 1);
+  date.setDate(date.getDate() + 1);
   date.setHours(1);
   date.setMinutes(1);
   ScriptApp.newTrigger('setTrigger').timeBased().at(date).create();
