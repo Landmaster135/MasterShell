@@ -22,8 +22,18 @@ function createDocument() {
   //【手順4】：作成したドキュメントをマイドライブから「削除」する
   DriveApp.getRootFolder().removeFile(fileId);
 
-  // ドキュメントを編集する
+  // ドキュメントを編集する。
   var body_docFile = docFile.getBody();
+  // ドキュメントのページ設定。
+  var margin_mm    = 13;
+  var dpi          = 72;
+  var unit_pixel   = 25.4;
+  var margin_pixel = margin_mm * dpi / unit_pixel;
+  body_docFile.setMarginTop(margin_pixel);
+  body_docFile.setMarginBottom(margin_pixel);
+  body_docFile.setMarginLeft(margin_pixel);
+  body_docFile.setMarginRight(margin_pixel);
+  // ドキュメントの内容を編集する。
   for(let i = 0; i <= 2; i++) {
     // 本体にタイトルを追加する
     var paragraph = body_docFile.appendParagraph('[未編集]\n').setHeading(DocumentApp.ParagraphHeading.TITLE).setAlignment(DocumentApp.HorizontalAlignment.LEFT);
