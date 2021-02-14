@@ -21,37 +21,10 @@ var array_result_extra_year = [];
 var i = 0;
 
 do {
-    // i = iCounter_and_pushDataInConditions(array_expense_fixed_month, array_result_fixed_month_category, array_result_fixed_month, i);
-    // i = iCounter_and_pushDataInConditions(array_expense_fixed_year, array_result_fixed_year_category, array_result_fixed_year, i);
-    // i = iCounter_and_pushDataInConditions(array_expense_extra_month, array_result_extra_month_category, array_result_extra_month, i);
-    // i = iCounter_and_pushDataInConditions(array_expense_extra_year, array_result_extra_year_category, array_result_extra_year, i);
-    if (array_expense_fixed_month.includes(`${[...document.querySelectorAll('td')][i].innerText}`) == true) {
-        array_result_fixed_month_category.push(`${[...document.querySelectorAll('td')][i].innerText}`);
-        i++;
-        str_expense = `${[...document.querySelectorAll('td')][i].innerText}`;
-        str_expense = pullOutExcrescence(str_expense);
-        array_result_fixed_month.push(str_expense);
-    }else if (array_expense_fixed_year.includes(`${[...document.querySelectorAll('td')][i].innerText}`) == true) {
-        array_result_fixed_year_category.push(`${[...document.querySelectorAll('td')][i].innerText}`);
-        i++;
-        str_expense = `${[...document.querySelectorAll('td')][i].innerText}`;
-        str_expense = pullOutExcrescence(str_expense);
-        array_result_fixed_year.push(str_expense);
-    }else if (array_expense_extra_month.includes(`${[...document.querySelectorAll('td')][i].innerText}`) == true) {
-        array_result_extra_month_category.push(`${[...document.querySelectorAll('td')][i].innerText}`);
-        i++;
-        str_expense = `${[...document.querySelectorAll('td')][i].innerText}`;
-        str_expense = pullOutExcrescence(str_expense);
-        array_result_extra_month.push(str_expense);
-    }else if (array_expense_extra_year.includes(`${[...document.querySelectorAll('td')][i].innerText}`) == true) {
-        array_result_extra_year_category.push(`${[...document.querySelectorAll('td')][i].innerText}`);
-        i++;
-        str_expense = `${[...document.querySelectorAll('td')][i].innerText}`;
-        str_expense = pullOutExcrescence(str_expense);
-        array_result_extra_year.push(str_expense);
-    }else{
-
-    }
+    i = iCounter_and_pushDataInConditions(array_expense_fixed_month, array_result_fixed_month_category, array_result_fixed_month, i);
+    i = iCounter_and_pushDataInConditions(array_expense_fixed_year, array_result_fixed_year_category, array_result_fixed_year, i);
+    i = iCounter_and_pushDataInConditions(array_expense_extra_month, array_result_extra_month_category, array_result_extra_month, i);
+    i = iCounter_and_pushDataInConditions(array_expense_extra_year, array_result_extra_year_category, array_result_extra_year, i);
     i++;
 }while(`${[...document.querySelectorAll('td')][i].innerText}` != '20');
 
@@ -72,6 +45,20 @@ function pullOutExcrescence(str_target) {
     return str_return;
 }
 
+function iCounter_and_pushDataInConditions(arrayCondition, arrayToPush1, arrayToPush2, i=0){
+    var str_expense;
+    if (arrayCondition.includes(`${[...document.querySelectorAll('td')][i].innerText}`) == true) {
+        arrayToPush1.push(`${[...document.querySelectorAll('td')][i].innerText}`);
+        i++;
+        str_expense = `${[...document.querySelectorAll('td')][i].innerText}`;
+        str_expense = pullOutExcrescence(str_expense);
+        arrayToPush2.push(str_expense);
+    }else{
+
+    }
+    return i;
+}
+
 function outputTextFromArray(array_target, sep1, sep2) {
     var outputText = ``;
     var j = 0;
@@ -85,18 +72,4 @@ function outputTextFromArray(array_target, sep1, sep2) {
         }
     });
     return outputText;
-}
-
-function iCounter_and_pushDataInConditions(arrayCondition, arrayToPush1, arrayToPush2, i=0){
-    var str_expense;
-    if (arrayCondition.includes(`${[...document.querySelectorAll('td')][i].innerText}`) == true) {
-        arrayToPush1.push(`${[...document.querySelectorAll('td')][i].innerText}`);
-        i++;
-        str_expense = `${[...document.querySelectorAll('td')][i].innerText}`;
-        str_expense = pullOutExcrescence(str_expense);
-        arrayToPush2.push(str_expense);
-    }else{
-
-    }
-    return i;
 }
