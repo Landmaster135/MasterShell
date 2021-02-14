@@ -1,10 +1,25 @@
 function setTrigger(){
+  var funcName = 'setTrigger';
+  deleteTrigger(funcName);
+  createTrigger(funcName);
+  duplicateDocument();
+}
+
+function createTrigger(funcName){
   const date = new Date();
-  date.setDate(date.getDate() + 2);
+  date.setDate(date.getDate() + 1);
   date.setHours(6);
   date.setMinutes(1);
-  ScriptApp.newTrigger('setTrigger').timeBased().at(date).create();
-  duplicateDocument();
+  ScriptApp.newTrigger(funcName).timeBased().at(date).create();
+}
+
+function deleteTrigger(funcName){
+  const triggers = ScriptApp.getProjectTriggers();
+  for(const trigger of triggers){
+    if(trigger.getHandlerFunction() == funcName){
+      ScriptApp.deleteTrigger(trigger);
+    }
+  }
 }
 
 function createDocument() {
