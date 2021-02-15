@@ -8,7 +8,7 @@ function setTrigger(){
 function createTrigger(funcName){
   const date = new Date();
   date.setDate(date.getDate() + 1);
-  date.setHours(6);
+  date.setHours(16); // 日本の時間より14時間早く設定する。6時に作る。
   date.setMinutes(1);
   ScriptApp.newTrigger(funcName).timeBased().at(date).create();
 }
