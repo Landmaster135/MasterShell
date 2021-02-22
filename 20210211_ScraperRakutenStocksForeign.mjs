@@ -2,13 +2,12 @@
 
 // Use Developer Tool（by ⌥⌘I）
 // Before executing this script, select DOM by clicking（by Command + Shift + C）.
-var reader = new FileReader();
 var array = [];
 
 // ※　Webの描画によってdivの場所が変わるので、startNumを弄ること。
-var rowNum = 2;    // 読み込む行の数
-var startNum = 29; // 読み始め（銘柄名）
-var i_row = 17;     // 一行下に遷移
+var rowNum     = 2;   // 読み込む行の数
+var startNum   = 29;  // 読み始め（銘柄名）
+var i_row      = 17;  // 一行下に遷移
 var valueArray = [0]; // 読み込む値（読み始める列から数えたインデックス：td,nobr）
 
 var str_name;

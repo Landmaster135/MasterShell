@@ -2,13 +2,12 @@
 
 // Use Developer Tool（by ⌥⌘I）
 // Before executing this script, select DOM by clicking（by Command + Shift + C）.
-var reader = new FileReader();
 var array = [];
 
 // ※　Webの描画によってdivの場所が変わるので、startNumを弄ること。
-var startNum = 46; // 読み始め
-var rowNum = 11;    // 読み込む行の数
-var i_row = 7;     // 一行下に遷移
+var startNum = 46;      // 読み始め
+var rowNum = 12;        // 読み込む行の数
+var i_row = 7;          // 一行下に遷移
 var valueArray = [0,3]; // 読み込む値（読み始める列から数えたインデックス）
 
 var str_base;
@@ -19,7 +18,6 @@ for (var i = 0; i < rowNum; i++) {
         str_base = `${[...document.querySelectorAll('td')][startNum+i*i_row+value].innerText}`;
         if (value == 0) {
             array.push(str_base.substr(0, str_base.indexOf("\n"))); // 改行文字の前の値
-            console.log("0");
         }else if (value == 3){
             str_before = str_base.substr(0, str_base.indexOf("\n")); // 改行文字の前の数値
             str_after  = str_base.substr(str_base.indexOf("\n") + 1, str_base.length - str_base.indexOf("\n")); // 改行文字の後の数値

@@ -2,14 +2,13 @@
 
 // Use Developer Tool（by ⌥⌘I）
 // Before executing this script, select DOM by clicking（by Command + Shift + C）.
-var reader = new FileReader();
 var array = [];
 
 // ※　Webの描画によってdivの場所が変わるので、startNumを弄ること。
-var startNum_a = 29;  // 読み始め（a）
-var startNum_font = 6 // 読み始め（font）
-var rowNum = 2;       // 読み込む行の数
-var i_row_a;          // 一行下に遷移
+var startNum_a    = 29; // 読み始め（a）
+var startNum_font = 6;  // 読み始め（font）
+var rowNum        = 5;  // 読み込む行の数
+var i_row_a;            // 一行下に遷移
 var displayedCountry = `${[...document.querySelectorAll('span')][0].innerText}`; // 表示中の国
 // 国によって取引の種類の数が違うため、条件分岐させる。
 if (displayedCountry == '米国') {
@@ -17,12 +16,12 @@ if (displayedCountry == '米国') {
 } else if (displayedCountry == '中国') {
     i_row_a = 3;
 }
-var i_row_font = 10;     // 一行下に遷移
+var i_row_font = 10;    // 一行下に遷移
 var valueArray = [0,4]; // 読み込む値（読み始める列から数えたインデックス：[aとfont,font]）
 
-var str_stock_name; // 銘柄名
+var str_stock_name;         // 銘柄名
 var str_acquisition_amount; // 取得金額
-var str_valuation_gain; // 評価損益
+var str_valuation_gain;     // 評価損益
 for (var i = 0; i < rowNum; i++) {
     valueArray.forEach (function(value) {
         if (value == 0) {
