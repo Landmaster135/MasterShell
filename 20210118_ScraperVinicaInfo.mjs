@@ -14,6 +14,7 @@ var array = [`${[...document.querySelectorAll('span')][4].innerText}`, // ワイ
              ``,// 入手場所
              ``,// 最寄り駅
              `${[...document.querySelectorAll('td')][18].innerText}`, // 原産地
+             ``,// 原産国
              ``,// 感想
              ``,// ハッシュタグ
              `${[...document.querySelectorAll('td')][20].innerText}`, // 備考
