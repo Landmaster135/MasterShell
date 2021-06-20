@@ -44,7 +44,7 @@ var array = [`${[...document.querySelectorAll('span')][10].innerText}` + ` ` + `
              ``,// 金額
              ``,// 入手場所
              ``,// 最寄り駅
-             `${[...document.querySelectorAll('td')][2].innerText}`.replace(/,/g, '<'), // 原産地
+             `${[...document.querySelectorAll('td')][2].innerText}`.replace(/\//g, '<'), // 原産地
              ``, // 原産国
              ``,// 感想
              ``,// ハッシュタグ
